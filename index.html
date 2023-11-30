@@ -14,9 +14,7 @@
     <header class="page-header">
         <div class="container header-container">
             <a class="page-logo" href="./index.html">
-                <svg width="191" height="48">
-                    <use href="./image/symbol.svg#icon-Logo"></use>
-                </svg>
+               <img src="./image/logo-onix.svg" alt="" width="187">
             </a>
             <address class="page-address">
                 <a class="page-address-tel" href="tel:+48731241518">+487 31 24 15 18</a>
@@ -48,9 +46,10 @@
     </header>
     <main>
         <section class="page-hero">
+            <div class="page-hero-bg"></div>
             <div class="container hero-container">
                 <div class="page-welcome">
-                    <svg class="icon-welcom" xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26" fill="none">
+                    <svg class="icon-welcom"  width="28" height="26" viewBox="0 0 28 26" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M7.15802 0C7.15802 0 7.46004 2.81891 8.63642 3.99529C9.81279 5.17167 12.6317 5.47368 12.6317 5.47368C12.6317 5.47368 9.81279 5.7757 8.63642 6.95208C7.46004 8.12846 7.15802 10.9474 7.15802 10.9474C7.15802 10.9474 6.85601 8.12846 5.67963 6.95208C4.50325 5.7757 1.68434 5.47368 1.68434 5.47368C1.68434 5.47368 4.50325 5.17167 5.67963 3.99529C6.85601 2.81891 7.15802 0 7.15802 0ZM19.4738 4.10526C19.4738 4.10526 19.9268 8.33363 21.6914 10.0982C23.456 11.8628 27.6843 12.3158 27.6843 12.3158C27.6843 12.3158 23.456 12.7688 21.6914 14.5334C19.9268 16.2979 19.4738 20.5263 19.4738 20.5263C19.4738 20.5263 19.0208 16.2979 17.2562 14.5334C15.4917 12.7688 11.2633 12.3158 11.2633 12.3158C11.2633 12.3158 15.4917 11.8628 17.2562 10.0982C19.0208 8.33363 19.4738 4.10526 19.4738 4.10526ZM9.00601 17.3099C7.53554 15.8394 7.15802 12.3158 7.15802 12.3158C7.15802 12.3158 6.78051 15.8394 5.31003 17.3099C3.83956 18.7804 0.315918 19.1579 0.315918 19.1579C0.315918 19.1579 3.83956 19.5354 5.31003 21.0059C6.78051 22.4764 7.15802 26 7.15802 26C7.15802 26 7.53554 22.4764 9.00601 21.0059C10.4765 19.5354 14.0001 19.1579 14.0001 19.1579C14.0001 19.1579 10.4765 18.7804 9.00601 17.3099Z"
                             fill="url(#paint0_linear_888_26044)" />
@@ -64,7 +63,7 @@
                     </svg>
                     <p class="page-welcome-text">Welcome to Caveonix</p>
                 </div>
-                <h1 class="hero-name"><span class="hero-name-first-part">Meet Us</span><br>AWS re:Invent!</h1>
+                <h1 class="hero-name"><span class="hero-name-first-part">Meet Us </span>at<br> AWS re:Invent!</h1>
                 <div>
                     <ul class="page-date">
                         <li class="page-date-item">
@@ -81,45 +80,49 @@
                                     <use href="./image/symbol.svg#icon-Location"></use>
                                 </svg>
                             </a>
-                            <p class="text-date"><span class="text-date-location">Las Vegas, Nevada</span>Booth #1226</p>
+                            <p class="text-date"><span class="text-date-location">Las Vegas, Nevada    </span> Booth #1226</p>
                         </li>
                     </ul>
                     <ul class="page-order">
                         <li>
-                            <button class="order-button" type="button">Book a Meeting</button>
+                            <a class="order-button" href="./index.html#booking-form">Book a Meeting                     
+                            </a>
                         </li>
                         <li>
-                            <button class="order-button" type="button">🔥 Win Prizes</button>
+                            <button class="prize-button" type="button">🔥 Win Prizes</button>
                         </li>
                     </ul>
                 </div>
-                <form class="booking-form" name="book-meeting-form" autocomplete="off">
-                    <p class="form-title">Meet Us in Las Vegas!</p>
-                    <ul class="input-booking-list">
-                        <li>
-                            <label class="lable-booking">First Name*
-                                <input class="input-booking" type="text" name="first-name">
-                            </label>
-                        </li>
-                        <li>
-                            <label class="lable-booking">Last Name*
-                                <input class="input-booking" type="text" name="last-name">
-                            </label>
-                        </li>
-                        <li>
-                            <label class="lable-booking">Work Email*
-                                <input class="input-booking" type="email" name="work-email">
-                            </label>
-                        </li>
-                        <li>
-                            <label class="lable-booking">Company Name*
-                                <input class="input-booking" type="text" name="company-name">
-                            </label>
-                        </li>
-                    </ul>
+                <form class="booking-form" id="booking-form" name="book-meeting-form" autocomplete="off">
+                    <legend class="form-title">Meet Us in Las Vegas!</legend> 
+                    <fieldset >
+                        <ul class="form-input-booking">
+                            <li class="form-input-booking-item">
+                                <label class="lable-booking" for="first-name">First Name<span class="lable-booking-required">*</span></label>
+                                <input class="input-booking" type="text" name="first-name" id="first-name" required placeholder="Steve">
+                            </li>
+                            <li class="form-input-booking-item">
+                                <label class="lable-booking" for="work-email">Work Email<span class="lable-booking-required">*</span></label>
+                                <input class="input-booking" type="email" name="work-email" id="work-email" required placeholder="steve.jobs@gmail.com">
+                            </li>
+                            <li class="form-input-booking-item">
+                                <label class="lable-booking" for="last-name">Last Name<span class="lable-booking-required">*</span></label>
+                                <input class="input-booking" type="text" name="last-name" id="last-name" required placeholder="Jobs">
+                            </li>
+                            <li class="form-input-booking-item">
+                                <label class="lable-booking" for="company-name">Company Name<span class="lable-booking-required">*</span></label>
+                                <input class="input-booking" type="text" name="company-name" id="company-name" required placeholder="Apple">
+                            </li>
+                        </ul> 
+                    </fieldset>
+                    <fieldset class="form-fit-back-message">
+                        <label class="lable-booking" for="form-fit-back">How did you hear about us?</label>
+                        <textarea class="input-fit-back" name="form-fit-back" id="form-fit-back" placeholder="Yoor message..."></textarea>
+                    </fieldset>
+                    
                     <button class="form-button" type="submit">
                         Book Meeting
-                    </button>
+                    </button>                    
                 </form>
             </div>             
         </section>
@@ -133,6 +136,7 @@
                     <svg width="152" height="100">
                         <use href="./image/symbol.svg#icon-Group"></use>
                     </svg>
+
                 </li>
                 <li>
                     <svg width="152" height="100">
@@ -174,9 +178,9 @@
                 </li>
             </ul>
         </section>
-        <section class="benefits">
+        <section class="page-benefits">
             <div class="container benefits-container">
-                <h2 class="section-name ">Join the Caveonix Team at <span class="hero-name-first-part">Booth #1226
+                <h2 class="section-name ">Join the Onix Team at <span class="hero-name-first-part">Booth #1226
                     </span></h2>
                 <p class="page-description">
                     Meet with our hybrid cloud experts to discover the capabilities of Caveonix - the
@@ -184,13 +188,113 @@
                     cloud security, compliance, and governance. Gain a comprehensive understanding of your on-premises and multicloud
                     infrastructure, applications, and data assets, to effectively manage digital risk.
                 </p>
+                <ul class="benefits-list">
+                    <li class="benefits-item">
+                        <div class="benefits">
+                            <div class="icon-benefits-item">
+                                <img src="./image/onix-group.svg" width="28.84">                        
+                            </div>
+                            <h3 class="benefits-title">Onix for VMC on AWS</h3>
+                        </div>
+                       <p class="benefits-description">Onix for VMware Cloud on AWS empowers your organization to effortlessly expand into the AWS cloud, optimizing its
+                    existing VMware investments without the need for additional hardware. With Onix, you can embrace VMC on AWS without
+                    compromising compliance controls.</p>
+                    </li>
+                    <li class="benefits-item">
+                        <div class="benefits">
+                            <div class="icon-benefits-item">
+                                <svg class="icon-benefits" width="28.84" height="28.84">
+                                    <use href="./image/symbol.svg#icon-shield-check"></use>
+                                </svg>
+                            </div>
+                            <h3 class="benefits-title">Continuous Monitoring and Risk Assessment</h3>
+                        </div>
+                        <p class="benefits-description">Integrate compliance, enterprise-wide risk assessment, and regulatory alignment for a robust risk management strategy.
+                        Discover how you can significantly reduce manual risk and compliance management efforts by 80%, while attaining an
+                        impressive 90% efficiency in real-time risk assessments through Onix’s continuous monitoring capability.</p>
+                    </li>
+                    <li class="benefits-item">
+                        <div class="benefits">
+                            <div class="icon-benefits-item">
+                                <svg class="icon-benefits" width="28.84" height="28.84">
+                                    <use href="./image/symbol.svg#icon-bank"></use>
+                                </svg>
+                            </div>
+                            <h3 class="benefits-title">Governance</h3>
+                        </div>
+                        <p class="benefits-description">Onix's AI-powered GRC platform offers a multifaceted strategy to address the significant challenges posed by an
+                        expanding cyber threat environment, changing regulatory mandates, and the increasing complexity of business demands. The
+                        platform employs Deep Learning (Neural-Net) and Machine Learning (ML) for AI to build Neural-InsightsTM, to provide
+                        comprehensive visibility, continuous assessment, and analytics to recommend prioritized mitigations resulting in reduced
+                        risks for a better TCO.</p>
+                    </li>
+                    <li class="benefits-item">
+                        <div class="benefits">
+                            <div class="icon-benefits-item">
+                                <svg class="icon-benefits" width="28.84" height="28.84">
+                                    <use href="./image/symbol.svg#icon-file-check"></use>
+                                </svg>
+                            </div>
+                            <h3 class="benefits-title">Continuous Compliance</h3>
+                        </div>
+                        <p class="benefits-description">Onix for VMware Cloud on AWS empowers your organization to effortlessly expand
+                            into the AWS cloud, optimizing its
+                            existing VMware investments without the need for additional hardware. With Onix, you can embrace VMC on AWS
+                            without
+                            compromising compliance controls.</p>
+                    </li>
+
+                </ul>
+                <a  class="order-button" href="./index.html#booking-form">Book a Meeting</a>
             </div>           
         </section>
-        <section>
-            <div class="">
-
+        <section class="store">
+            <div class="store-bg"></div>
+            <div class="container store-container">
+                <h2 class="store-title">We are Excited to Meet You!</h2>
+                <p class="store-slogan">We have awesome swag, raffles, and so much more in store! 🥳</p>
+                <ul class="store-list">
+                    <li class="store-item">
+                        <div class="store-illustration">
+                            <img src="./image/store/lego-technic-bugatti-chiron.jpg" alt="product illustration lego" width="326">
+                        </div>
+                        <div class="srore-info-item">
+                            <h3 class="store-title-item">LEGO Technic Bugatti Chiron</h3>
+                        </div>                        
+                        
+                    </li>
+                    <li class="store-item">
+                        <div class="store-illustration">
+                            <img src="./image/store/apple-ipad.jpg" alt="product illustration ipad" width="254">
+                        </div> 
+                        <div class="srore-info-item">
+                            <h3 class="store-title-item">Apple Ipad</h3>                
+                        </div>                       
+                            </li>
+                    <li class="store-item">
+                        <div class="store-illustration">
+                            <img src="./image/store/play-station-5.jpg" alt="product illustration ps" width="338">
+                        </div>
+                        <div class="srore-info-item">
+                            <h3 class="store-title-item">PlayStation 5</h3>
+                        </div>                   
+                    </li>
+                </ul>
             </div>
         </section>
+        <footer>
+            <div class="container footer-container">
+                <h2 class="footer-title">Copyright © Onix 2023. All rights reserved.</h2>
+                <ul class="footer-info-list">
+                    <li class="footer-info-item">
+                        <a href="">Terms of Use</a>
+                    </li>
+                    <li class="footer-info-item">
+                        <a href="">Privacy Policy</a>
+                    </li>
+                </ul>               
+            </div>            
+        </footer>
     </main>
 </body>
 </html>
