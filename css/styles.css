@@ -48,6 +48,7 @@ fieldset {
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
+  justify-content: center;
 }
 .section-name {
   text-align: center;
