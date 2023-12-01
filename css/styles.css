@@ -299,13 +299,18 @@ fieldset {
   font-family: inherit;
   padding-left: 10px;
   font-size: 16px;
+  outline: 0 solid transparent;
+  transition: border 250ms linear;
 }
 
 .input-booking::placeholder,
 .input-fit-back::placeholder {
   font-size: 16px;
 }
-
+.input-booking:focus,
+.input-fit-back:focus {
+  border: 2px solid #664dff;
+}
 .form-fit-back-message {
   position: relative;
   margin-top: 10px;
@@ -324,6 +329,8 @@ fieldset {
   font-family: inherit;
   padding-left: 10px;
   font-size: 16px;
+  outline: 0 solid transparent;
+  transition: border 250ms linear;
 }
 
 .form-button {
